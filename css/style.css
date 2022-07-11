@@ -27,7 +27,7 @@ nav, section {
 
     background-color: #be3144;
     width: 100vw;
-
+    z-index: 1000;
 }
 
 #navbar ul {
@@ -76,6 +76,7 @@ nav, section {
 }
 
 #projects {
+    display: relative;
     background-color: #45567d;
     text-align: center;
     width: 100%;
@@ -123,13 +124,163 @@ nav, section {
 
 .project-tile span {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
+    position: relative;
+}
+
+
+.project-tile span code {
+    opacity: 0;
+    transition: 1s;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: orange;
+}
+
+
+.project-tile span:hover code {
+    opacity: 1;
+}
+
+#noshow{
+    display: relative;
+}
+
+#SeeMore {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background-color: #303841;
+    width: 18rem;
+    padding: 1rem;
+    bottom: 15rem;
+    left: 50%;
+    transform: translateX(-50%);    
+    transition: 1s;
+}
+
+#SeeMore:hover{
+    background-color: #be3144;
+}
+
+#SeeMore::after{
+    transition: 1s;
+    position: absolute;
+    top: 10%;
+    right: 1.5rem;
+    content: ">";
+    font-size: 3rem;
+}
+
+#SeeMore:hover::after{
+    transform: translateX(0.5rem);
+}
+
+
+#portfolio{
+    background-color: #28292c;
+    min-height: 75vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+#portfolio h2 {
+    font-family: 'Raleway', sans-serisf;
+    font-size: 7rem;
+    font-weight: 700;
+    color: white;
+}
+
+#portfolio h6 {
+    font-size: 2rem;
+    color: #be3144;
+    margin-bottom: 8rem;
+}
+
+#portfolio ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5em;
+}
+
+
+#portfolio ul li{
+    list-style-type: none;
+    
+}
+
+
+#portfolio ul li a{
+    display: block;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: 1s;
+}
+
+
+#portfolio ul li a:hover{
+    color: #be3144;
+    transform: scale(1.3) translateY(-10px);
+    margin: initial 2em;
+}
+
+@media screen and ( max-width: 1000px){
+
+    .project-tile{
+        width: 90%;
+    }
+    
+}
+
+@media screen and ( max-width: 879px){
+    #SeeMore {
+        transform: translateX(22rem);
+    }
+    
 }
 
 
 
-@media screen and ( max-width: 480px){
-    body{
-        background-color: blue;
+@media screen and ( max-width: 700px){
+    :root{
+        font-size: 9px;
     }
+    
+}
+
+@media screen and ( max-width: 600px){
+    :root{
+        font-size: 8px;
+    } 
+    .project-tile{
+        width: 80%;
+    }
+    
+}
+@media screen and ( max-width: 500px){
+    :root{
+        font-size: 6px;
+    }
+    .project-tile{
+        width: 70%;
+    }
+     
+}
+@media screen and ( max-width: 400px){
+    :root{
+        font-size: 5px;
+    }
+    .project-tile{
+        width: 60%;
+    }
+    
 }
