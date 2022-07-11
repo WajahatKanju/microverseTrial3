@@ -1,0 +1,21 @@
+body{
+    position: relative;
+}
+#welcome-section {
+    min-height: 100vh;
+    background-color: brown;
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: maroon;
+    width: 100vw;
+
+}
+@media screen and ( max-width: 480px){
+    body{
+        background-color: blue;
+    }
+}
