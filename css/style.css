@@ -1,19 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@700&display=swap');
+
+:root {
+    font-size: 10px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
 body{
     position: relative;
+    font-family: 'Poppins', sans-serif;
 }
-#welcome-section {
-    min-height: 100vh;
-    background-color: brown;
+
+nav, section {
+    padding: 0 4rem;
 }
+
 #navbar{
     position: fixed;
     top: 0;
     left: 0;
 
-    background-color: maroon;
+    background-color: #be3144;
     width: 100vw;
 
 }
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 2.2rem;
+    
+}
+
+#navbar ul li:hover {
+    background-color: #45567d;
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#welcome-section {
+    min-height: 100vh;
+    background-color: #28292c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#welcome-section h1 {
+    font-family: 'Raleway', sans-serisf;
+    font-size: 7rem;
+    font-weight: 700;
+    color: white;
+}
+
+#welcome-section h3 {
+    font-size: 3rem;
+    color: #be3144;
+}
+
+#projects {
+    background-color: #45567d;
+    text-align: center;
+    width: 100%;
+    padding: 10rem;
+}
+
+#projects h2 {
+    font-size: 4rem;
+    color: white;
+
+    border-bottom: 0.3rem solid white;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+      margin-bottom: 0px;
+    margin-bottom: 6rem;
+}
+
+.project-tile{
+    margin: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.project-tile a {
+    display: block;
+    background-color: #303841;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+.project-tile img {
+    display: block;
+    height: 25vw;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile span {
+    display: block;
+    padding: 1rem 2rem;
+}
+
+
+
 @media screen and ( max-width: 480px){
     body{
         background-color: blue;
